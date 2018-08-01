@@ -13,6 +13,10 @@
 		FE180C682108E92900E71BE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE180C662108E92900E71BE4 /* Main.storyboard */; };
 		FE180C6A2108E92C00E71BE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE180C692108E92C00E71BE4 /* Assets.xcassets */; };
 		FE180C6D2108E92C00E71BE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE180C6B2108E92C00E71BE4 /* LaunchScreen.storyboard */; };
+		FED8A100210C692500C4005B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A0FF210C692500C4005B /* ThirdViewController.swift */; };
+		FED8A102210C697D00C4005B /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A101210C697D00C4005B /* FourthViewController.swift */; };
+		FED8A104210C698C00C4005B /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A103210C698C00C4005B /* FifthViewController.swift */; };
+		FED8A106210E035C00C4005B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED8A105210E035C00C4005B /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		FE180C692108E92C00E71BE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE180C6C2108E92C00E71BE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE180C6E2108E92C00E71BE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FED8A0FF210C692500C4005B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		FED8A101210C697D00C4005B /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		FED8A103210C698C00C4005B /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		FED8A105210E035C00C4005B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +64,16 @@
 		FE180C5F2108E92800E71BE4 /* 時計　コピー */ = {
 			isa = PBXGroup;
 			children = (
+				FE180C662108E92900E71BE4 /* Main.storyboard */,
+				FED8A105210E035C00C4005B /* File.swift */,
 				FE180C602108E92900E71BE4 /* AppDelegate.swift */,
 				FE180C622108E92900E71BE4 /* FirstViewController.swift */,
 				FE180C642108E92900E71BE4 /* SecondViewController.swift */,
-				FE180C662108E92900E71BE4 /* Main.storyboard */,
-				FE180C692108E92C00E71BE4 /* Assets.xcassets */,
+				FED8A0FF210C692500C4005B /* ThirdViewController.swift */,
+				FED8A101210C697D00C4005B /* FourthViewController.swift */,
+				FED8A103210C698C00C4005B /* FifthViewController.swift */,
 				FE180C6B2108E92C00E71BE4 /* LaunchScreen.storyboard */,
+				FE180C692108E92C00E71BE4 /* Assets.xcassets */,
 				FE180C6E2108E92C00E71BE4 /* Info.plist */,
 			);
 			path = "時計　コピー";
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED8A104210C698C00C4005B /* FifthViewController.swift in Sources */,
 				FE180C652108E92900E71BE4 /* SecondViewController.swift in Sources */,
+				FED8A106210E035C00C4005B /* File.swift in Sources */,
 				FE180C612108E92900E71BE4 /* AppDelegate.swift in Sources */,
+				FED8A100210C692500C4005B /* ThirdViewController.swift in Sources */,
 				FE180C632108E92900E71BE4 /* FirstViewController.swift in Sources */,
+				FED8A102210C697D00C4005B /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
