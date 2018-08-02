@@ -5,9 +5,9 @@
 	<key>AAAA_CurrentOSXVersion</key>
 	<string>MacOS High Sierra: 1454.900000</string>
 	<key>AAAA_DKDDocumentVersion</key>
-	<string>3054 App Store  : 2001 v0</string>
+	<string>3055 App Store  : 2001 v0</string>
 	<key>AAAA_EazyDrawVersion</key>
-	<string>3054</string>
+	<string>3055</string>
 	<key>AAA_DKDQuicklookData</key>
 	<data>
 	JVBERi0xLjMKJcTl8uXrp/Og0MTGCjQgMCBvYmoKPDwgL0xlbmd0aCA1IDAgUiAvRmls
@@ -113,7 +113,7 @@
 	IDIgMCBSIF0gPj4KZW5kb2JqCjEyIDAgb2JqCjw8IC9UeXBlIC9DYXRhbG9nIC9QYWdl
 	cyAzIDAgUiAvVmVyc2lvbiAvMS40ID4+CmVuZG9iagoxMyAwIG9iagooTWFjIE9TIFgg
 	MTAuMTMuNiBRdWFydHogUERGQ29udGV4dCkKZW5kb2JqCjE0IDAgb2JqCihEOjIwMTgw
-	NzI5MTQyMzA5WjAwJzAwJykKZW5kb2JqCjEgMCBvYmoKPDwgL1Byb2R1Y2VyIDEzIDAg
+	ODAyMDAxMjQ0WjAwJzAwJykKZW5kb2JqCjEgMCBvYmoKPDwgL1Byb2R1Y2VyIDEzIDAg
 	UiAvQ3JlYXRpb25EYXRlIDE0IDAgUiAvTW9kRGF0ZSAxNCAwIFIgPj4KZW5kb2JqCnhy
 	ZWYKMCAxNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDUyNzggMDAwMDAgbiAKMDAw
 	MDAwMzQ5NiAwMDAwMCBuIAowMDAwMDA1MDM2IDAwMDAwIG4gCjAwMDAwMDAwMjIgMDAw
@@ -122,11 +122,11 @@
 	IG4gCjAwMDAwMDM3OTcgMDAwMDAgbiAKMDAwMDAwNDk3OSAwMDAwMCBuIAowMDAwMDA1
 	MTE5IDAwMDAwIG4gCjAwMDAwMDUxODMgMDAwMDAgbiAKMDAwMDAwNTIzNiAwMDAwMCBu
 	IAp0cmFpbGVyCjw8IC9TaXplIDE1IC9Sb290IDEyIDAgUiAvSW5mbyAxIDAgUiAvSUQg
-	WyA8YzEwZjlkOTJkNDI2MTNjZDdiNGU0Mjc1ODVlY2IyMWY+CjxjMTBmOWQ5MmQ0MjYx
-	M2NkN2I0ZTQyNzU4NWVjYjIxZj4gXSA+PgpzdGFydHhyZWYKNTM1MwolJUVPRgo=
+	WyA8ZGM5MmIzMTRhM2FiNjFlZWFmMGJjZjAzN2Y2NDVmZGU+CjxkYzkyYjMxNGEzYWI2
+	MWVlYWYwYmNmMDM3ZjY0NWZkZT4gXSA+PgpzdGFydHhyZWYKNTM1MwolJUVPRgo=
 	</data>
 	<key>DKDChangeTimeStamp</key>
-	<string>2018-07-29 14:23:01 +0000</string>
+	<string>2018-08-02 00:12:33 +0000</string>
 	<key>DKDCreateTimeStamp</key>
 	<string>2018-07-29 09:21:48 +0000</string>
 	<key>DKDDisplayGraphicDetails</key>
@@ -239,7 +239,7 @@
 		<key>ExportContent</key>
 		<string>Just Graphics</string>
 		<key>ExportExpand</key>
-		<string>0.416666666667</string>
+		<string>0.625</string>
 		<key>ExportFileExtension</key>
 		<string>png</string>
 		<key>ExportImageAntialias</key>
@@ -1233,7 +1233,7 @@
 		<string>NO</string>
 	</dict>
 	<key>DKDSaveTimeStamp</key>
-	<string>2018-07-29 14:23:09 +0000</string>
+	<string>2018-08-02 00:12:44 +0000</string>
 	<key>DKDTablet</key>
 	<dict>
 		<key>PenMax</key>
@@ -1429,7 +1429,7 @@
 		<key>CursorMode</key>
 		<string>Nothing</string>
 		<key>DocCenter</key>
-		<string>{288, 405.290322581}</string>
+		<string>{288, 454.64516129}</string>
 		<key>DocumentFileName</key>
 		<string>/Users/merawataru/OneDrive/ドキュメント/プログラミング/コピーアプリ/時計　コピー/タイマータブアイコン.ezdraw</string>
 		<key>DrawersOnMainView</key>
@@ -1447,7 +1447,7 @@
 		<key>LayersDrawerEdgePreference</key>
 		<string>Auto</string>
 		<key>WindowLocation</key>
-		<string>206 129 1018 747 0 0 1440 877 </string>
+		<string>78 130 1018 747 0 0 1440 877 </string>
 		<key>ZoomPercent</key>
 		<string>172.252672</string>
 	</dict>

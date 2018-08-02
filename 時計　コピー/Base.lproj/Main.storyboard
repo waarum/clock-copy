@@ -126,7 +126,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="P3Z-Ad-S11"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="4" title="タイマー" image="second" selectedImage="second" id="lF3-E7-hYh"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="タイマー" image="timerTabItem" selectedImage="timerTabItem" id="lF3-E7-hYh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dbq-tJ-vp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,5 +157,6 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
+        <image name="timerTabItem" width="30" height="30"/>
     </resources>
 </document>
