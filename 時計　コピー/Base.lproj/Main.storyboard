@@ -139,33 +139,39 @@
                                     <!--2018-08-02 22:26:39 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-BW-aQr">
-                                <rect key="frame" x="20" y="377" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-BW-aQr">
+                                <rect key="frame" x="34.5" y="388.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udY-MN-7mx">
-                                <rect key="frame" x="309" y="377" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udY-MN-7mx">
+                                <rect key="frame" x="294.5" y="388.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="obP-y8-3L4">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obP-y8-3L4">
                                 <rect key="frame" x="0.0" y="274" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="uJJ-ag-OxT"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Title" id="MSD-1A-Kr3"/>
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pwV-Yr-2tk" firstAttribute="trailing" secondItem="P3Z-Ad-S11" secondAttribute="trailing" id="7f5-Pb-9xb"/>
-                            <constraint firstItem="FqS-BW-aQr" firstAttribute="top" secondItem="obP-y8-3L4" secondAttribute="bottom" constant="40" id="8GN-gM-52r"/>
+                            <constraint firstItem="obP-y8-3L4" firstAttribute="trailing" secondItem="P3Z-Ad-S11" secondAttribute="trailing" id="Aga-Xs-C88"/>
                             <constraint firstItem="IPQ-wE-WGP" firstAttribute="leading" secondItem="P3Z-Ad-S11" secondAttribute="leading" id="BcS-s1-oUg"/>
+                            <constraint firstItem="obP-y8-3L4" firstAttribute="top" secondItem="pwV-Yr-2tk" secondAttribute="bottom" id="GpA-69-IxO"/>
                             <constraint firstItem="pwV-Yr-2tk" firstAttribute="leading" secondItem="P3Z-Ad-S11" secondAttribute="leading" id="H1y-0t-b3N"/>
                             <constraint firstItem="IPQ-wE-WGP" firstAttribute="top" secondItem="P3Z-Ad-S11" secondAttribute="top" id="J1E-e2-sfT"/>
                             <constraint firstItem="pwV-Yr-2tk" firstAttribute="top" secondItem="IPQ-wE-WGP" secondAttribute="bottom" id="N1f-fa-d3N"/>
+                            <constraint firstItem="FqS-BW-aQr" firstAttribute="centerY" secondItem="icq-Eb-aZg" secondAttribute="centerY" constant="70" id="NmJ-KU-1jA"/>
+                            <constraint firstItem="FqS-BW-aQr" firstAttribute="centerX" secondItem="icq-Eb-aZg" secondAttribute="centerX" constant="-130" id="SiG-6Q-fLX"/>
+                            <constraint firstItem="obP-y8-3L4" firstAttribute="leading" secondItem="P3Z-Ad-S11" secondAttribute="leading" id="T4L-vJ-hxX"/>
+                            <constraint firstItem="udY-MN-7mx" firstAttribute="centerY" secondItem="icq-Eb-aZg" secondAttribute="centerY" constant="70" id="Yzu-TL-f6H"/>
                             <constraint firstItem="IPQ-wE-WGP" firstAttribute="trailing" secondItem="P3Z-Ad-S11" secondAttribute="trailing" id="f7h-JE-eFJ"/>
-                            <constraint firstItem="udY-MN-7mx" firstAttribute="top" secondItem="obP-y8-3L4" secondAttribute="bottom" constant="40" id="l0I-K2-9d3"/>
-                            <constraint firstItem="P3Z-Ad-S11" firstAttribute="trailing" secondItem="udY-MN-7mx" secondAttribute="trailing" constant="20" id="lB0-pF-hyg"/>
-                            <constraint firstItem="FqS-BW-aQr" firstAttribute="leading" secondItem="P3Z-Ad-S11" secondAttribute="leading" constant="20" id="pH3-P9-v9j"/>
+                            <constraint firstItem="udY-MN-7mx" firstAttribute="centerX" secondItem="icq-Eb-aZg" secondAttribute="centerX" constant="130" id="mcb-5R-XFg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P3Z-Ad-S11"/>
                     </view>
