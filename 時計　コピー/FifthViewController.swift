@@ -15,7 +15,7 @@ class FifthViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        // Date Pickerの文字を白に変更
+        // Picker Viewの文字を白に変更
         setPickerLetterColor()
         
     }
@@ -25,11 +25,12 @@ class FifthViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var timePikcer: UIDatePicker!
     
-    // Date Pickerの文字を白に変更する関数の宣言
+    @IBOutlet weak var timePicker: UIPickerView!
+    
+    // Picker Viewの文字を白に変更する関数の宣言
     func setPickerLetterColor() {
-        timePikcer.setValue(UIColor.white, forKey: "textColor")
+        timePicker.setValue(UIColor.white, forKey: "textColor")
     }
     
     /*

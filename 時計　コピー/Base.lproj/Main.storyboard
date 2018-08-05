@@ -154,31 +154,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="pwV-Yr-2tk">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-R4-g44">
                                 <rect key="frame" x="0.0" y="64" width="320" height="210"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="210" id="6gp-iz-8kZ"/>
+                                    <constraint firstAttribute="height" constant="210" id="m7e-JN-mL3"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="554941599.23189294">
-                                    <!--2018-08-02 22:26:39 +0000-->
-                                </date>
-                            </datePicker>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="pwV-Yr-2tk" firstAttribute="trailing" secondItem="P3Z-Ad-S11" secondAttribute="trailing" id="7f5-Pb-9xb"/>
+                            <constraint firstItem="obP-y8-3L4" firstAttribute="top" secondItem="cGy-at-QRG" secondAttribute="bottom" id="1sy-6Z-MS8"/>
                             <constraint firstItem="obP-y8-3L4" firstAttribute="trailing" secondItem="P3Z-Ad-S11" secondAttribute="trailing" id="Aga-Xs-C88"/>
-                            <constraint firstItem="obP-y8-3L4" firstAttribute="top" secondItem="pwV-Yr-2tk" secondAttribute="bottom" id="GpA-69-IxO"/>
-                            <constraint firstItem="pwV-Yr-2tk" firstAttribute="leading" secondItem="P3Z-Ad-S11" secondAttribute="leading" id="H1y-0t-b3N"/>
-                            <constraint firstItem="pwV-Yr-2tk" firstAttribute="top" secondItem="P3Z-Ad-S11" secondAttribute="top" id="J3F-c0-OoL"/>
                             <constraint firstItem="cGy-at-QRG" firstAttribute="trailing" secondItem="P3Z-Ad-S11" secondAttribute="trailing" id="J4Z-Ey-8GA"/>
                             <constraint firstItem="FqS-BW-aQr" firstAttribute="centerY" secondItem="icq-Eb-aZg" secondAttribute="centerY" constant="70" id="NmJ-KU-1jA"/>
+                            <constraint firstItem="ksF-R4-g44" firstAttribute="top" secondItem="P3Z-Ad-S11" secondAttribute="top" id="OCl-a6-wqg"/>
                             <constraint firstItem="FqS-BW-aQr" firstAttribute="centerX" secondItem="icq-Eb-aZg" secondAttribute="centerX" constant="-130" id="SiG-6Q-fLX"/>
                             <constraint firstItem="obP-y8-3L4" firstAttribute="leading" secondItem="P3Z-Ad-S11" secondAttribute="leading" id="T4L-vJ-hxX"/>
+                            <constraint firstItem="ksF-R4-g44" firstAttribute="leading" secondItem="P3Z-Ad-S11" secondAttribute="leading" id="UcZ-wB-pR1"/>
                             <constraint firstItem="udY-MN-7mx" firstAttribute="centerY" secondItem="icq-Eb-aZg" secondAttribute="centerY" constant="70" id="Yzu-TL-f6H"/>
                             <constraint firstItem="cGy-at-QRG" firstAttribute="leading" secondItem="P3Z-Ad-S11" secondAttribute="leading" id="de0-LL-1yG"/>
                             <constraint firstItem="udY-MN-7mx" firstAttribute="centerX" secondItem="icq-Eb-aZg" secondAttribute="centerX" constant="130" id="mcb-5R-XFg"/>
+                            <constraint firstItem="ksF-R4-g44" firstAttribute="trailing" secondItem="P3Z-Ad-S11" secondAttribute="trailing" id="mdS-U3-y4T"/>
                             <constraint firstItem="cGy-at-QRG" firstAttribute="top" secondItem="P3Z-Ad-S11" secondAttribute="top" id="zEt-HD-zOw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P3Z-Ad-S11"/>
@@ -186,12 +182,12 @@
                     <tabBarItem key="tabBarItem" tag="-2" title="タイマー" image="timerTabItem" selectedImage="timerTabItem" id="lF3-E7-hYh"/>
                     <navigationItem key="navigationItem" title="タイマー" id="lmM-Vw-fJ0"/>
                     <connections>
-                        <outlet property="timePikcer" destination="pwV-Yr-2tk" id="80F-vH-NeD"/>
+                        <outlet property="timePicker" destination="ksF-R4-g44" id="dH5-6w-oEu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dbq-tJ-vp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1422" y="1859"/>
+            <point key="canvasLocation" x="1114" y="1845"/>
         </scene>
         <!--Item-->
         <scene sceneID="gMM-Fb-ATr">
