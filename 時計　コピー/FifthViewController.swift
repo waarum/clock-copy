@@ -8,15 +8,39 @@
 
 import UIKit
 
-class FifthViewController: UIViewController {
+class FifthViewController: UIViewController/*, UIPickerViewDelegate, UIPickerViewDataSource */{
+    
+    func declarer(times:Int) -> [Int] {
+        var timeArray = [Int](repeating: 0, count: times)
+        for i in 0...times-1 {
+            timeArray[i] = i
+        }
+        return timeArray
+    }
+    
+    
+    
+   /*
+    // 列数指定
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 3
+    }
+    
+    // 行数指定
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        <#code#>
+    }
+    */
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        // Picker Viewの文字を白に変更
-        setPickerLetterColor()
+
+        let hours:[Int] = declarer(times:24)
+        print(hours)
         
     }
 
@@ -28,10 +52,8 @@ class FifthViewController: UIViewController {
     
     @IBOutlet weak var timePicker: UIPickerView!
     
-    // Picker Viewの文字を白に変更する関数の宣言
-    func setPickerLetterColor() {
-        timePicker.setValue(UIColor.white, forKey: "textColor")
-    }
+    
+    
     
     /*
     // MARK: - Navigation
