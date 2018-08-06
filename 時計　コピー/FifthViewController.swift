@@ -8,19 +8,28 @@
 
 import UIKit
 
-class FifthViewController: UIViewController/*, UIPickerViewDelegate, UIPickerViewDataSource */{
+func declarer(times:Int) -> [Int] {
+    var timeArray = [Int](repeating: 0, count: times+1)
+    for i in 0...times {
+        timeArray[i] = i
+    }
+    return timeArray
+}
+
+class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    func declarer(times:Int) -> [Int] {
-        var timeArray = [Int](repeating: 0, count: times)
-        for i in 0...times-1 {
+    /*func declarer(times:Int) -> [Int] {
+        var timeArray = [Int](repeating: 0, count: times+1)
+        for i in 0...times {
             timeArray[i] = i
         }
         return timeArray
-    }
+    }*/
     
     
     
-   /*
+    
+   
     // 列数指定
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
@@ -28,19 +37,54 @@ class FifthViewController: UIViewController/*, UIPickerViewDelegate, UIPickerVie
     
     // 行数指定
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+        switch component {
+        case 0:
+            return hours.count
+        case 1:
+            return minutes.count
+        default:
+            return seconds.count
+        }
     }
-    */
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch component {
+        case 0:
+            return "\(hours[row])"
+        case 1:
+            return "\(minutes[row])"
+        default:
+            return "\(seconds[row])"
+        }
+    }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        var data:[Int]
+        switch component {
+        case 0:
+            data = hours
+        case 1:
+            data = minutes
+        default:
+            data = seconds
+        }
+        let titleData = "\(data[row])"
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        return myTitle
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
-        let hours:[Int] = declarer(times:24)
+        
+        timePicker.delegate = self
+        timePicker.dataSource = self
+        
+       
         print(hours)
+        print(minutes)
+        print(seconds)
         
     }
 
@@ -52,7 +96,9 @@ class FifthViewController: UIViewController/*, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var timePicker: UIPickerView!
     
-    
+    let hours:[Int] = declarer(times:23)
+    let minutes:[Int] = declarer(times: 59)
+    let seconds:[Int] = declarer(times: 59)
     
     
     /*
