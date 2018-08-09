@@ -72,6 +72,35 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         return myTitle
     }
+    
+    // 選択された秒数の保存
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch component {
+        case 0:
+            setTime.setValue(hours[row], forKey: "hourKey")
+            hourValue = setTime.integer(forKey: "hourKey")
+            print("\(hourValue)時間")
+        case 1:
+            setTime.setValue(minutes[row], forKey: "minuteKey")
+            minuteValue = setTime.integer(forKey: "minuteKey")
+            print("\(setTime.integer(forKey: "minuteKey"))分")
+        default:
+            setTime.setValue(seconds[row], forKey: "secondKey")
+            secondValue = setTime.integer(forKey: "secondKey")
+            print("\(setTime.integer(forKey: "secondKey"))秒")
+        }
+    }
+    
+    // ピッカー初期設定
+    func initialSet(time: [Int], component: Int, value:Int) {
+        for row in 0..<time.count {
+            if time[row] == value {
+                timePicker.selectRow(row, inComponent: component, animated: true)
+            }
+        }
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,10 +110,15 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         timePicker.delegate = self
         timePicker.dataSource = self
         
-       
-        print(hours)
-        print(minutes)
-        print(seconds)
+        hourValue = setTime.integer(forKey: "hourKey")
+        minuteValue = setTime.integer(forKey: "minuteKey")
+        secondValue = setTime.integer(forKey: "secondKey")
+        
+        initialSet(time: hours, component: 0, value: hourValue)
+        initialSet(time: minutes, component: 1, value: minuteValue)
+        initialSet(time: seconds, component: 2, value: secondValue)
+        
+        
         
     }
 
@@ -95,11 +129,16 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     
     @IBOutlet weak var timePicker: UIPickerView!
+    @IBOutlet weak var remainTimeLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     
     let hours:[Int] = declarer(times:23)
     let minutes:[Int] = declarer(times: 59)
     let seconds:[Int] = declarer(times: 59)
-    
+    let setTime = UserDefaults.standard
+    var hourValue:Int = 0
+    var minuteValue:Int = 0
+    var secondValue:Int = 0
     
     /*
     // MARK: - Navigation
