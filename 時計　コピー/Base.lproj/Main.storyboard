@@ -127,10 +127,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-BW-aQr">
                                 <rect key="frame" x="7" y="339" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="stopButton:" destination="A4R-gk-jyl" eventType="touchUpInside" id="nZy-7f-GvY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udY-MN-7mx">
                                 <rect key="frame" x="267" y="339" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="startButton:" destination="A4R-gk-jyl" eventType="touchUpInside" id="hdf-ys-OKo"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="obP-y8-3L4">
                                 <rect key="frame" x="0.0" y="274" width="320" height="44"/>
@@ -185,7 +191,6 @@
                     <navigationItem key="navigationItem" title="タイマー" id="lmM-Vw-fJ0"/>
                     <connections>
                         <outlet property="remainTimeLabel" destination="cGy-at-QRG" id="sdH-Vm-wmO"/>
-                        <outlet property="startButton" destination="udY-MN-7mx" id="Xw1-SF-pym"/>
                         <outlet property="timePicker" destination="ksF-R4-g44" id="dH5-6w-oEu"/>
                     </connections>
                 </viewController>

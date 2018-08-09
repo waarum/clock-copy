@@ -130,7 +130,10 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var timePicker: UIPickerView!
     @IBOutlet weak var remainTimeLabel: UILabel!
-    @IBOutlet weak var startButton: UIButton!
+    @IBAction func startButton(_ sender: Any) {
+    }
+    @IBAction func stopButton(_ sender: Any) {
+    }
     
     let hours:[Int] = declarer(times:23)
     let minutes:[Int] = declarer(times: 59)
