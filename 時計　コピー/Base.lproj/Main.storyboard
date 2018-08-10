@@ -152,13 +152,19 @@
                                     <navigationItem title="Title" id="MSD-1A-Kr3"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-at-QRG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-at-QRG">
                                 <rect key="frame" x="0.0" y="64" width="320" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="mF5-IO-EWW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="1:59:03">
+                                        <attributes>
+                                            <font key="NSFont" size="96" name="HelveticaNeue-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-R4-g44">
@@ -191,6 +197,7 @@
                     <navigationItem key="navigationItem" title="タイマー" id="lmM-Vw-fJ0"/>
                     <connections>
                         <outlet property="remainTimeLabel" destination="cGy-at-QRG" id="sdH-Vm-wmO"/>
+                        <outlet property="startButton" destination="udY-MN-7mx" id="puy-qB-y3u"/>
                         <outlet property="timePicker" destination="ksF-R4-g44" id="dH5-6w-oEu"/>
                     </connections>
                 </viewController>
@@ -203,7 +210,7 @@
             <objects>
                 <navigationController id="CSI-qh-egY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="kpX-wh-mNU"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" shadowImage="枠線" id="ipe-j1-9gg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="ipe-j1-9gg">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -251,6 +258,5 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
         <image name="timerTabItem" width="30" height="30"/>
-        <image name="枠線" width="1" height="1"/>
     </resources>
 </document>
