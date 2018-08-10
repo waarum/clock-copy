@@ -138,6 +138,7 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     
+    
     // 画面読み込み時
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -168,9 +169,11 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // ピッカー
     @IBOutlet weak var timePicker: UIPickerView!
+    // 残り時間ラベル
     @IBOutlet weak var remainTimeLabel: UILabel!
+    // スタートボタン
     @IBOutlet weak var startButton: UIButton!
     // スタートボタンを押した後の操作
     @IBAction func startButton(_ sender: Any) {
@@ -186,7 +189,22 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction(timer:)), userInfo: nil, repeats: true)
         
     }
+    // ストップボタン
+    @IBOutlet weak var stopButton: UIButton!
+    // ストップボタンを押した後の操作
     @IBAction func stopButton(_ sender: Any) {
+    }
+    // キャンセルボタン
+    @IBOutlet weak var cancelButton: UIButton!
+    // キャンセルボタンを押した後の操作
+    @IBAction func cancelButton(_ sender: Any) {
+        timer?.invalidate()
+        // ボタンを出す
+        startButton.isHidden = false
+        // pickerを出す
+        timePicker.isHidden = false
+        // ラベルを隠す
+        remainTimeLabel.isHidden = true
     }
     
     let hours:[Int] = declarer(times:23)
