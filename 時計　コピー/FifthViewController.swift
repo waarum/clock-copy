@@ -179,8 +179,10 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func startButton(_ sender: Any) {
         // 設定時間を残り時間に代入
         remainCount = nowValue
-        // ボタンを隠す
+        // スタートボタンを隠す
         startButton.isHidden = true
+        // ストップボタンを出す
+        stopButton.isHidden = false
         // pickerを隠す
         timePicker.isHidden = true
         // ラベルを出す
@@ -193,11 +195,18 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var stopButton: UIButton!
     // ストップボタンを押した後の操作
     @IBAction func stopButton(_ sender: Any) {
+        // タイマー停止
+        timer?.invalidate()
+        // スタートボタンを出す
+        startButton.isHidden = false
+        // ストップボタンを隠す
+        stopButton.isHidden = true
     }
     // キャンセルボタン
     @IBOutlet weak var cancelButton: UIButton!
     // キャンセルボタンを押した後の操作
     @IBAction func cancelButton(_ sender: Any) {
+        // タイマー停止
         timer?.invalidate()
         // ボタンを出す
         startButton.isHidden = false
@@ -205,6 +214,10 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         timePicker.isHidden = false
         // ラベルを隠す
         remainTimeLabel.isHidden = true
+        // タイマーをリセット
+        count = 0
+        // ラベルもリセット
+        labelUpDate(nowValue)
     }
     
     let hours:[Int] = declarer(times:23)
