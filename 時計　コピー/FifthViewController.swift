@@ -135,8 +135,10 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func cancel () {
         // タイマー停止
         timer?.invalidate()
-        // ボタンを出す
+        // show start button
         startButton.isHidden = false
+        // Hide stop button
+        stopButton.isHidden = true
         // pickerを出す
         timePicker.isHidden = false
         // ラベルを隠す
@@ -170,7 +172,8 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         remainTimeLabel.isHidden = true
         remainTimeLabel.textColor = UIColor.white
         labelUpDate(nowValue)
-        
+        // Hide Sotop button
+        stopButton.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
