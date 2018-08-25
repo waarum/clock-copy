@@ -125,15 +125,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-BW-aQr">
-                                <rect key="frame" x="267" y="339" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="274.5" y="339" width="31" height="30"/>
+                                <state key="normal" title="停止"/>
                                 <connections>
                                     <action selector="stopButton:" destination="A4R-gk-jyl" eventType="touchUpInside" id="nZy-7f-GvY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udY-MN-7mx">
-                                <rect key="frame" x="267" y="339" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="274.5" y="339" width="31" height="30"/>
+                                <state key="normal" title="開始"/>
                                 <connections>
                                     <action selector="startButton:" destination="A4R-gk-jyl" eventType="touchUpInside" id="hdf-ys-OKo"/>
                                 </connections>
@@ -175,8 +175,8 @@
                                 </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyl-Hy-baC">
-                                <rect key="frame" x="7" y="339" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="-8.5" y="339" width="77" height="30"/>
+                                <state key="normal" title="キャンセル"/>
                                 <connections>
                                     <action selector="cancelButton:" destination="A4R-gk-jyl" eventType="touchUpInside" id="LC9-VR-IXn"/>
                                 </connections>
