@@ -162,6 +162,7 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
+    
     // ピッカー
     @IBOutlet weak var timePicker: UIPickerView!
     // 残り時間ラベル
@@ -182,7 +183,22 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         remainTimeLabel.isHidden = false
         // タイマースタート
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction(timer:)), userInfo: nil, repeats: true)
-        
+       
+        // 通知内容
+        let content = UNMutableNotificationContent()
+        content.title = "タイマー終了"
+        content.sound = UNNotificationSound.default()
+        // 通知タイミング
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(remainCount), repeats: false)
+        // 通知リクエスト
+        let request = UNNotificationRequest(identifier: String(remainCount), content: content, trigger: trigger)
+        // 通知登録
+        let center = UNUserNotificationCenter.current()
+        center.add(request) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
     // ストップボタン
     @IBOutlet weak var stopButton: UIButton!
