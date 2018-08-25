@@ -125,8 +125,15 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     // 毎秒の操作
     @objc func timerAction(timer:Timer) {
         count += 1
-        if upDater() == 0 {
+        if upDater() == -1 {
+            // タイマー停止
             timer.invalidate()
+            // Hide remainTimeLabel
+            remainTimeLabel.isHidden = true
+            // Show picker
+            timePicker.isHidden = false
+            // reset count
+            count = 0
         } 
     }
     
