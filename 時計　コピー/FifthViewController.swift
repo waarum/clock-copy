@@ -149,6 +149,31 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         labelUpDate(nowValue)
     }
     
+    // Notification setting
+    func endNotification() {
+        // 通知内容
+        let content = UNMutableNotificationContent()
+        content.title = "タイマー終了"
+        content.sound = UNNotificationSound.default()
+        // 通知タイミング
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(remainCount), repeats: false)
+        // 通知リクエスト
+        let request = UNNotificationRequest(identifier: String(remainCount), content: content, trigger: trigger)
+        // Define the custom actions.
+        let endAction = UNNotificationAction(identifier: "END_ACTION", title: "停止", options: UNNotificationActionOptions(rawValue: 0))
+        let repeatAction = UNNotificationAction(identifier: "REPEAT_ACTION", title: "繰り返し", options: UNNotificationActionOptions(rawValue: 0))
+        // Define the notification type
+        let timerEndCategory = UNNotificationCategory(identifier: "TIMER_END", actions: [endAction, repeatAction], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "", options: .customDismissAction)
+        // 通知登録
+        let center = UNUserNotificationCenter.current()
+        // Register the notification type
+        center.setNotificationCategories([timerEndCategory])
+        center.add(request) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
     
     // 画面読み込み時
     override func viewDidLoad() {
@@ -202,22 +227,7 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         remainTimeLabel.isHidden = false
         // タイマースタート
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction(timer:)), userInfo: nil, repeats: true)
-       
-        // 通知内容
-        let content = UNMutableNotificationContent()
-        content.title = "タイマー終了"
-        content.sound = UNNotificationSound.default()
-        // 通知タイミング
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(remainCount), repeats: false)
-        // 通知リクエスト
-        let request = UNNotificationRequest(identifier: String(remainCount), content: content, trigger: trigger)
-        // 通知登録
-        let center = UNUserNotificationCenter.current()
-        center.add(request) { (error) in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-        }
+        endNotification()
     }
     // ストップボタン
     @IBOutlet weak var stopButton: UIButton!
