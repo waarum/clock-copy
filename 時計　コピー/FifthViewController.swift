@@ -150,7 +150,7 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     // Notification setting
-    func endNotification() {
+    func notificationRequest() {
         // 通知内容
         let content = UNMutableNotificationContent()
         content.title = "タイマー終了"
@@ -158,14 +158,12 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // 通知タイミング
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(remainCount), repeats: false)
         // 通知リクエスト
-        let request = UNNotificationRequest(identifier: String(remainCount), content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "TIMER_END", content: content, trigger: trigger)
         // Define the custom actions.
         let endAction = UNNotificationAction(identifier: "END_ACTION", title: "停止", options: UNNotificationActionOptions(rawValue: 0))
         let repeatAction = UNNotificationAction(identifier: "REPEAT_ACTION", title: "繰り返し", options: UNNotificationActionOptions(rawValue: 0))
         // Define the notification type
         let timerEndCategory = UNNotificationCategory(identifier: "TIMER_END", actions: [endAction, repeatAction], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "", options: .customDismissAction)
-        // 通知登録
-        let center = UNUserNotificationCenter.current()
         // Register the notification type
         center.setNotificationCategories([timerEndCategory])
         center.add(request) { (error) in
@@ -175,6 +173,11 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
     }
     
+    // Cancel notification
+    func notificationCancel() {
+        let notificationKey:[String] = ["TIMER_END"]
+        center.removePendingNotificationRequests(withIdentifiers: notificationKey)
+    }
     // 画面読み込み時
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -227,7 +230,7 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         remainTimeLabel.isHidden = false
         // タイマースタート
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction(timer:)), userInfo: nil, repeats: true)
-        endNotification()
+        notificationRequest()
     }
     // ストップボタン
     @IBOutlet weak var stopButton: UIButton!
@@ -239,12 +242,14 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         startButton.isHidden = false
         // ストップボタンを隠す
         stopButton.isHidden = true
+        notificationCancel()
     }
     // キャンセルボタン
     @IBOutlet weak var cancelButton: UIButton!
     // キャンセルボタンを押した後の操作
     @IBAction func cancelButton(_ sender: Any) {
         cancel()
+        notificationCancel()
     }
     
     
@@ -259,6 +264,9 @@ class FifthViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var nowValue:Int = 0
     var timer:Timer?
     var remainCount:Int = 0
+    
+    // Define Notification center
+    let center = UNUserNotificationCenter.current()
     /*
     // MARK: - Navigation
 
